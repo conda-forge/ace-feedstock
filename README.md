@@ -9,7 +9,7 @@ Feedstock license: BSD-3-Clause
 
 Summary: The ADAPTIVE Communication Environment
 
-
+The ADAPTIVE Communication Environment
 
 Current build status
 ====================
