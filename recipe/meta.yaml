@@ -33,7 +33,9 @@ about:
   license: DOC
   license_file: COPYING
   summary: 'The ADAPTIVE Communication Environment'
+  description: 'The ADAPTIVE Communication Environment'
   dev_url: https://github.com/DOCGroup/ACE_TAO
+  doc_url: https://www.dre.vanderbilt.edu/Doxygen
 
 extra:
   recipe-maintainers:
