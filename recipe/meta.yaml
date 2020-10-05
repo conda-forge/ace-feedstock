@@ -24,7 +24,8 @@ requirements:
 
 test:
   commands:
-    - test -f $PREFIX/lib/libACE.so  # [unix]
+    - test -f $PREFIX/lib/libACE.dylib  # [osx]
+    - test -f $PREFIX/lib/libACE.so  # [linux]
     - if not exist %LIBRARY_LIB%\\ACE.lib exit 1  # [win]
 
 about:
