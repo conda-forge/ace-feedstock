@@ -12,7 +12,7 @@ source:
       - prefix_perl.patch  # [unix]
 
 build:
-  number: 3
+  number: 4
 
 requirements:
   build:
@@ -36,6 +36,7 @@ about:
   description: 'The ADAPTIVE Communication Environment'
   dev_url: https://github.com/DOCGroup/ACE_TAO
   doc_url: https://www.dre.vanderbilt.edu/Doxygen
+  license_url: https://github.com/DOCGroup/ACE_TAO/blob/master/ACE/COPYING
 
 extra:
   recipe-maintainers:
