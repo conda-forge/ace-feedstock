@@ -12,8 +12,7 @@ source:
       - prefix_perl.patch  # [unix]
 
 build:
-  number: 2
-  skip: true  # [osx]
+  number: 3
 
 requirements:
   build:
