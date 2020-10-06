@@ -35,7 +35,7 @@ about:
   summary: 'The ADAPTIVE Communication Environment'
   description: 'The ADAPTIVE Communication Environment'
   dev_url: https://github.com/DOCGroup/ACE_TAO
-  doc_url: https://www.dre.vanderbilt.edu/Doxygen
+  doc_url: https://www.dre.vanderbilt.edu/Doxygen/{{ version }}/html/
   license_url: https://github.com/DOCGroup/ACE_TAO/blob/master/ACE/COPYING
 
 extra:
