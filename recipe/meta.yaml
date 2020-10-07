@@ -12,7 +12,7 @@ source:
       - prefix_perl.patch  # [unix]
 
 build:
-  number: 5
+  number: 6
 
 requirements:
   build:
