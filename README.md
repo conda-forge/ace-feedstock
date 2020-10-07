@@ -3,11 +3,15 @@ About ace
 
 Home: https://www.dre.vanderbilt.edu/~schmidt/ACE.html
 
-Package license: DOC
+Package license: [DOC](https://github.com/DOCGroup/ACE_TAO/blob/master/ACE/COPYING)
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ace-feedstock/blob/master/LICENSE.txt)
 
 Summary: The ADAPTIVE Communication Environment
+
+Development: https://github.com/DOCGroup/ACE_TAO
+
+Documentation: https://www.dre.vanderbilt.edu/Doxygen/6.5.11/html/
 
 The ADAPTIVE Communication Environment
 
