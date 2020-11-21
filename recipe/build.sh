@@ -35,6 +35,7 @@ cd $ACE_SOURCE_PATH
 # so we set it to an empty value just to run make and make install
 export ACE_BUILD_ENV_BACKUP=${BUILD}
 export BUILD=
+
 make -j$CPU_COUNT
 
 # Install step

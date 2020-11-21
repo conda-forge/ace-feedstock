@@ -1,0 +1,23 @@
+From 1fcc04e7010fbb618da4a8575007fde814c01730 Mon Sep 17 00:00:00 2001
+From: Silvio Traversaro <silvio@traversaro.it>
+Date: Sun, 22 Nov 2020 18:28:39 +0100
+Subject: [PATCH] Workaround for rpath on macOS for conda-forge
+
+---
+ ACE_wrappers/include/makeinclude/platform_macosx_yosemite.GNU | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/ACE_wrappers/include/makeinclude/platform_macosx_yosemite.GNU b/ACE_wrappers/include/makeinclude/platform_macosx_yosemite.GNU
+index 8c63a923a445..d23fbda1c59a 100644
+--- a/ACE_wrappers/include/makeinclude/platform_macosx_yosemite.GNU
++++ b/ACE_wrappers/include/makeinclude/platform_macosx_yosemite.GNU
+@@ -3,7 +3,7 @@ include $(ACE_ROOT)/include/makeinclude/platform_macosx_mavericks.GNU
+ ## The following is to circumvent the restriction of System Integrity Protection (SIP)
+ ## by embedding the path information of dynamic libraries into the executables.
+ 
+-SOFLAGS	+= -install_name @rpath/$@
++SOFLAGS	+= -install_name @rpath/$(notdir $@)
+ space := $(subst ,, )
+ 
+ LDFLAGS += $(foreach libpath,$(LIBPATHS),-rpath $(if $(filter "/%,$(subst $
+ 
