@@ -8,9 +8,11 @@ package:
 source:
   - url: https://github.com/DOCGroup/ACE_TAO/releases/download/ACE%2BTAO-{{ version|replace(".", "_") }}/ACE-src-{{ version }}.tar.gz
     sha256: fa6075d895d400c9b3f02a309b124c8f2e620c515addcf6e8b5476a42f286863
+    patches:
+      - fix_macos_rpath.patch  # [osx]
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -21,6 +23,13 @@ requirements:
     - perl
 
 test:
+  files:
+    - ace_example.cpp
+
+  requires:
+    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}
+
   commands:
     - test -f $PREFIX/lib/libACE.dylib  # [osx]
     - test -f $PREFIX/lib/libACE.so  # [linux]
