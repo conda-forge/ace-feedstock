@@ -1,5 +1,5 @@
 {% set name = "ace" %}
-{% set version = "7.0.0" %}
+{% set version = "7.0.1" %}
 
 package:
   name: {{ name }}
@@ -7,12 +7,12 @@ package:
 
 source:
   - url: https://github.com/DOCGroup/ACE_TAO/releases/download/ACE%2BTAO-{{ version|replace(".", "_") }}/ACE-src-{{ version }}.tar.gz
-    sha256: 5c34d56fff11c0de19ae00b0962e4b8abef36215ce763a8003b5b74810cc2a1b
+    sha256: 01688f9b096a7196ce9a69a905104243b28167700fd0650189216e57a4d47159
     patches:
       - fix_macos_rpath.patch  # [osx]
 
 build:
-  number: 1
+  number: 0
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x.x') }}
 
@@ -41,8 +41,8 @@ about:
   home: https://www.dre.vanderbilt.edu/~schmidt/ACE.html
   license: DOC
   license_file: COPYING
-  summary: 'The ADAPTIVE Communication Environment'
-  description: 'The ADAPTIVE Communication Environment'
+  summary: The ADAPTIVE Communication Environment
+  description: The ADAPTIVE Communication Environment
   dev_url: https://github.com/DOCGroup/ACE_TAO
   doc_url: https://www.dre.vanderbilt.edu/Doxygen/{{ version }}/html/
   license_url: https://github.com/DOCGroup/ACE_TAO/blob/master/ACE/COPYING
