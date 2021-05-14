@@ -11,7 +11,7 @@ Summary: The ADAPTIVE Communication Environment
 
 Development: https://github.com/DOCGroup/ACE_TAO
 
-Documentation: https://www.dre.vanderbilt.edu/Doxygen/7.0.1/html/
+Documentation: https://www.dre.vanderbilt.edu/Doxygen/7.0.2/html/
 
 The ADAPTIVE Communication Environment
 
@@ -103,6 +103,7 @@ Installing `ace` from the `conda-forge` channel can be achieved by adding `conda
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `ace` can be installed with:
