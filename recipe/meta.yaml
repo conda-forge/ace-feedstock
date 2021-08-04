@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/DOCGroup/ACE_TAO/releases/download/ACE%2BTAO-{{ version|replace(".", "_") }}/ACE-src-{{ version }}.tar.gz
-    sha256: d16ad573c12bfae6375057c5bd5c568721f1766cae21cfccfe7e4339051dbbe2
+    sha256: cdf21d143460ebaf9dff029f65621dbf6f3f15ba96b85c1c1be9c542ce603f2c
     patches:
       - fix_macos_rpath.patch  # [osx]
 
