@@ -39,8 +39,8 @@ about:
   home: https://www.dre.vanderbilt.edu/~schmidt/ACE.html
   license: DOC
   license_file: COPYING
-  summary: 'The ADAPTIVE Communication Environment'
-  description: 'The ADAPTIVE Communication Environment'
+  summary: The ADAPTIVE Communication Environment
+  description: The ADAPTIVE Communication Environment
   dev_url: https://github.com/DOCGroup/ACE_TAO
   doc_url: https://www.dre.vanderbilt.edu/Doxygen/{{ version }}/html/
   license_url: https://github.com/DOCGroup/ACE_TAO/blob/master/ACE/COPYING
