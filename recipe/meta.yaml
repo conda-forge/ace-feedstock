@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/DOCGroup/ACE_TAO/releases/download/ACE%2BTAO-{{ version|replace(".", "_") }}/ACE-src-{{ version }}.tar.gz
-    sha256: 597404c269e3c9688d1ff06d18c6166e4f95d84db5015e214bd38d8fa6ca4996
+    sha256: 524746a7181583b20a1cbef0e30e30d29277b96c69dce34c675a3ee5ee6fc30a
 
 build:
   number: 0
