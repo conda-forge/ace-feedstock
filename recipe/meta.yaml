@@ -18,7 +18,6 @@ build:
 
 requirements:
   build:
-    - gnuconfig  # [unix]
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
     - vs2017_win-64          # [win64]
