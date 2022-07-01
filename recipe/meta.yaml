@@ -1,5 +1,5 @@
 {% set name = "ace" %}
-{% set version = "7.0.7" %}
+{% set version = "7.0.8" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/DOCGroup/ACE_TAO/releases/download/ACE%2BTAO-{{ version|replace(".", "_") }}/ACE-src-{{ version }}.tar.gz
-    sha256: fbe072b28dd18d50b88e85d9579240135c3caa87587de039d4a9aed915f5cb7c
+    sha256: 38811c3edfc8e923067e0b0c2ca4409d060e9d03a5d25d6cb3fb6f971ac0b557
 
 build:
   number: 0
