@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Get an updated config.sub and config.guess
+cp $BUILD_PREFIX/share/gnuconfig/config.* ./apps/JAWS/clients/WebSTONE/src
 
 # Installation following the instructions in
 # https://htmlpreview.github.io/?https://github.com/DOCGroup/ACE_TAO/blob/master/ACE/ACE-INSTALL.html#unix
