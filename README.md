@@ -11,7 +11,7 @@ Summary: The ADAPTIVE Communication Environment
 
 Development: https://github.com/DOCGroup/ACE_TAO
 
-Documentation: https://www.dre.vanderbilt.edu/Doxygen/7.1.1/html/
+Documentation: https://www.dre.vanderbilt.edu/Doxygen/7.1.2/html/
 
 The ADAPTIVE Communication Environment
 
