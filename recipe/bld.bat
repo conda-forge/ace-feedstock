@@ -21,8 +21,8 @@ REM Create config.h file
 echo #include "ace/config-windows.h" > %ACE_SOURCE_PATH%\config.h
 
 REM Build step
-echo "Executing msbuild %SLN_FILE% /p:Configuration=%SLN_CFG%,Platform=%SLN_PLAT%,PlatformToolset=v142"
-msbuild %SLN_FILE% /p:Configuration=%SLN_CFG%,Platform=%SLN_PLAT%,PlatformToolset=v142 /maxcpucount
+echo "Executing msbuild %SLN_FILE% /p:Configuration=%SLN_CFG%,Platform=%SLN_PLAT%,PlatformToolset=%CMAKE_GENERATOR_TOOLSET%"
+msbuild %SLN_FILE% /p:Configuration=%SLN_CFG%,Platform=%SLN_PLAT%,PlatformToolset=%CMAKE_GENERATOR_TOOLSET% /maxcpucount
 if errorlevel 1 exit 1
 
 REM Install libraries 
