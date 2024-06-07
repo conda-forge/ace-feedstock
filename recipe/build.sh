@@ -8,6 +8,10 @@ export WORKSPACE=$ACE_ROOT/ace/ace.mwc
 export INSTALL_PREFIX=$PREFIX
 export PERL_PATH=$CONDA_PREFIX/bin/perl
 
+if [[ $target_platform == "osx-arm64" ]]; then
+  export FLAGS_C_CC="-target arm64-apple-macos"
+fi
+
 # Configure step
 cd $ACE_ROOT
 perl $ACE_ROOT/bin/mwc.pl -type gnuace -features "zlib=0,ssl=0,openssl11=0,trio=0,xt=0,fl=0,fox=0,tk=0,qt=0,rapi=0,stlport=0,rwho=0" $WORKSPACE
