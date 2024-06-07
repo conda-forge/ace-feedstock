@@ -1,0 +1,23 @@
+From 60afd1516edd04a98839fa69c1b322aa264c0bd1 Mon Sep 17 00:00:00 2001
+From: Silvio Traversaro <silvio@traversaro.it>
+Date: Thu, 6 Jun 2024 23:23:32 -0400
+Subject: [PATCH] Do not hardcode CC and CXX env variables on macos
+
+---
+ ACE/include/makeinclude/platform_macosx_lion.GNU | 3 ---
+ 1 file changed, 3 deletions(-)
+
+diff --git a/ACE/include/makeinclude/platform_macosx_lion.GNU b/ACE/include/makeinclude/platform_macosx_lion.GNU
+index bca8cc9b9971d..f03ed7cf0b3e8 100644
+--- a/ACE/include/makeinclude/platform_macosx_lion.GNU
++++ b/ACE/include/makeinclude/platform_macosx_lion.GNU
+@@ -19,9 +19,6 @@ ifeq (,$(buildbits))
+   LDFLAGS    += -m64
+ endif
+ 
+-CC:=clang
+-CXX:=clang++
+-
+ PLATFORM_NDDS_FLAGS=-ppPath cpp-4.2 -I.
+ 
+ include $(ACE_ROOT)/include/makeinclude/platform_macosx_common.GNU
