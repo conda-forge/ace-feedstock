@@ -1,5 +1,5 @@
 {% set name = "ace" %}
-{% set version = "8.0.0" %}
+{% set version = "8.0.1" %}
 
 package:
   name: {{ name }}
@@ -7,12 +7,12 @@ package:
 
 source:
   - url: https://github.com/DOCGroup/ACE_TAO/releases/download/ACE%2BTAO-{{ version|replace(".", "_") }}/ACE-src-{{ version }}.tar.gz
-    sha256: 9d2d3c24d33742ea348a841dcc46efbf86d6d350ef57dd31176ac941be838259
+    sha256: 1230874c8f24b82d5da842236695a1278ceb5efda9bebcd6e38c4db51cdd7b25
     patches:
       - do_no_hardcode_cc_cxx_on_macos.patch
 
 build:
-  number: 1
+  number: 0
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x.x') }}
 
