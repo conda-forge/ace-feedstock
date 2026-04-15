@@ -2,6 +2,8 @@ ace:
 - 8.0.5
 c_compiler:
 - vs2022
+c_stdlib:
+- vs
 channel_sources:
 - conda-forge
 channel_targets:
