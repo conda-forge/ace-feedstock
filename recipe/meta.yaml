@@ -1,5 +1,5 @@
 {% set name = "ace" %}
-{% set version = "6.5.20" %}
+{% set version = "6.5.24" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/DOCGroup/ACE_TAO/releases/download/ACE%2BTAO-{{ version|replace(".", "_") }}/ACE-src-{{ version }}.tar.gz
-    sha256: 078fa8002114ba46e63bc5c187cd57f0bb5e5b953f762b121cdc3caef19db194
+    sha256: 3a64864d17bbdcea24ec8d133cc33f40b038f9743622efdc232fdd7e9b0736b3
     patches:
       - fix_macos_rpath.patch  # [osx]
 
@@ -20,7 +20,7 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
-    - vs2017_win-64          # [win64]
+    - {{ stdlib("c") }}
     - make                   # [not win]
     - perl
 
