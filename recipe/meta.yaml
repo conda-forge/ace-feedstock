@@ -12,7 +12,7 @@ source:
       - do_no_hardcode_cc_cxx_on_macos.patch
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x.x') }}
 

@@ -1,4 +1,4 @@
-REM Installation following the instructions in 
+REM Installation following the instructions in
 REM https://htmlpreview.github.io/?https://github.com/DOCGroup/ACE_TAO/blob/master/ACE/ACE-INSTALL.html
 set ACE_ROOT=%SRC_DIR%
 set ACE_SOURCE_PATH=%ACE_ROOT%\ace
@@ -15,7 +15,7 @@ echo %SLN_PLAT%
 
 REM Configure step
 cd %ACE_ROOT%
-perl %ACE_ROOT%\bin\mwc.pl -type vs2019 -features "uses_wchar=0,zlib=0,ssl=0,openssl11=0,trio=0,xt=0,fl=0,fox=0,tk=0,qt=0,rapi=0,stlport=0,rwho=0" %WORKSPACE%.mwc
+perl %ACE_ROOT%\bin\mwc.pl -type vs2022 -features "uses_wchar=0,zlib=0,ssl=0,openssl11=0,trio=0,xt=0,fl=0,fox=0,tk=0,qt=0,rapi=0,stlport=0,rwho=0" %WORKSPACE%.mwc
 
 REM Create config.h file
 echo #include "ace/config-windows.h" > %ACE_SOURCE_PATH%\config.h
@@ -25,7 +25,7 @@ echo "Executing msbuild %SLN_FILE% /p:Configuration=%SLN_CFG%,Platform=%SLN_PLAT
 msbuild %SLN_FILE% /p:Configuration=%SLN_CFG%,Platform=%SLN_PLAT%,PlatformToolset=%CMAKE_GENERATOR_TOOLSET% /maxcpucount
 if errorlevel 1 exit 1
 
-REM Install libraries 
+REM Install libraries
 REM Following the same files installed in https://github.com/microsoft/vcpkg/blob/2019.09/ports/ace/portfile.cmake#L101
 copy %ACE_ROOT%\lib\ACE.dll %LIBRARY_BIN%\
 copy %ACE_ROOT%\lib\ACE.lib %LIBRARY_LIB%\
